@@ -1,6 +1,6 @@
 .header {
 	display: flex;
-	width: 100vw;
+	width: 100%;
 	height: 50px;
 	padding: 10px 20px;
 	align-items: center;
@@ -15,12 +15,11 @@
 	height: 40px;
 	background: url('../img/logo.jpg') 0 0/contain no-repeat;
 	border-radius: 10px;
-	/* margin-right: 100px; */
 	cursor: pointer;
 }
 
 .header-search {
-	/* margin-right: 100px; */
+
 }
 .header-search input {
 	height: 30px;
