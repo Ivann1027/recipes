@@ -1,27 +1,34 @@
+import { useLocation, Link } from "react-router-dom"
 import { useGetRecipesQuery } from "../servises/recipeApi"
 import { IRecipe } from "../types/types"
-import RecipeItem from "./RecipeItem"
 import '../css/recipes.css'
-import { Link } from "react-router-dom"
+import RecipeItem from "./RecipeItem"
 import SortCategories from "./SortCategories"
 
-const RecipeList = () => {
+const Search = () => {
 
 	const { data: recipes } = useGetRecipesQuery(null)
 	const categories: string[] = Array.from(new Set(recipes?.flatMap(recipe => recipe.category)))
+	const location = useLocation()
+	const query: string = location.state.query
+
+	const requiredRecipes =	recipes?.filter(recipe => {
+		return recipe.name.toLowerCase().includes(query.toLowerCase())
+	})
+	
 
 	return (
 		<section>
 			<SortCategories categories={categories} />
 			<section className="recipeList">
-				{recipes && recipes.map((recipe: IRecipe) => (
+				{requiredRecipes && requiredRecipes.map((recipe: IRecipe) => (
 					<Link to={`/recipes/${recipe.id}`} key={recipe.id}>
 						<RecipeItem recipe={recipe} />
-					</Link>	
+					</Link>
 				))}
 			</section>
 		</section>
 	)
 }
 
-export default RecipeList
+export default Search

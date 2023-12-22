@@ -8,23 +8,28 @@ const RecipePage = () => {
 	const { id } = useParams()
 	const { data: recipe } = useGetRecipeQuery(String(id))
 
-
 	return (
 		<section className="recipePage">
-			<h1>{recipe && recipe.name}</h1> 
-			<p>{recipe?.description}</p>
-			<div>
-				<h1>Ингредиенты:</h1>
+			<h1 className='recipePage-title'>{recipe && recipe.name}</h1> 
+			<section className='recipePage-about'>
+				<div className='recipePage-img'></div>
+				<p className='recipePage-description'>{recipe?.description}</p>
+				<p className='recipePage-time'><strong>Время приготовления:</strong> <br />
+					{recipe && recipe.time.hours > 0 && `${recipe.time.hours} ч.`} {recipe && recipe.time.minutes > 0 && `${recipe.time.minutes} мин.`}
+				</p>
+			</section>
+			<section className='ingredients'>
+				<h1 className='ingredients-title'>Ингредиенты:</h1>
 				<ul>
 					{recipe && recipe.ingredients.map(ingredient => (
-						<ul key={ingredient.name}>{ingredient.name} - {ingredient.amount}.</ul>
+						<li key={ingredient.name}>{ingredient.name} - {ingredient.amount}.</li>
 					))}
 				</ul>
-			</div>
-			<div>
-				<h1>Приготовление:</h1>
+			</section>
+			<div className='cooking'>
+				<h1 className='cooking-title'>Приготовление:</h1>
 				{recipe && recipe.steps.map(step => (
-					<p key={step.num}>{step.num}. {step.body}</p>
+					<p className='cooking-step' key={step.num}>{step.num}. {step.body}</p>
 				))}
 			</div>
 		</section>

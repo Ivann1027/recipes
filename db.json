@@ -32,8 +32,7 @@
 			"time": {
 				"hours": 2,
 				"minutes": 55
-			},
-			"img": "./src/img/harcho.jpg"
+			}
 		},
 		{
 			"id": 2,
@@ -64,8 +63,7 @@
 			"time": {
 				"hours": 0,
 				"minutes": 30 
-			},
-			"img": "./src/img/cezar.jpg"
+			}
 		},
 		{
 			"id": 3,
@@ -101,8 +99,7 @@
 			"time": {
 				"hours": 2,
 				"minutes": 10
-			},
-			"img": "./src/img/boloneze.jpg"
+			}
 		},
 		{
 			"id": 4,
@@ -131,8 +128,7 @@
 			"time": {
 				"hours": 0,
 				"minutes": 15
-			},
-			"img": "./src/img/hachapuri.jpg"
+			}
 		},
 		{
 			"id": 5,
@@ -161,8 +157,7 @@
 			"time": {
 				"hours": 0,
 				"minutes": 30
-			},
-			"img": "./src/img/roli_maki.jpg"
+			}
 		},
 		{
 			"id": 6,
@@ -192,8 +187,7 @@
 			"time": {
 				"hours": 1,
 				"minutes": 0
-			},
-			"img": "./src/img/oladia.jpg"
+			}
 		},
 		{
 			"id": 7,
@@ -225,8 +219,7 @@
 			"time": {
 				"hours": 1,
 				"minutes": 30
-			},
-			"img": "src/img/plov.jpg"
+			}
 		},
 		{
 			"id": 8,
@@ -262,8 +255,7 @@
 			"time": {
 				"hours": 2,
 				"minutes": 0
-			},
-			"img": "./src/img/borsch.jpg"
+			}
 		}
 	]
 }

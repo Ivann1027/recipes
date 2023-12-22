@@ -5,7 +5,7 @@ const Main = () => {
 
 
 	return (
-		<section className="main">
+		<section className="main wrapper">
 			<Outlet />
 		</section>
 	)

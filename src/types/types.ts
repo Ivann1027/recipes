@@ -18,5 +18,4 @@ export interface IRecipe {
 		hours: number
 		minutes: number
 	}
-	img: string
 }

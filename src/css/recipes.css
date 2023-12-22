@@ -1,7 +1,8 @@
 .recipeList {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 20px;
+	column-gap: 20px;
+	row-gap: 40px;
 	justify-items: center;
 }
 
@@ -10,13 +11,19 @@
 	flex-direction: column;
 	width: 300px;
 	height: 300px;
-	border: 1px solid red;
 	overflow: hidden;
+	box-shadow: 3px 3px 6px gray;
+}
+.recipeItem:hover {
+	transform: scale(1.05);
+	background: lightgoldenrodyellow;
+	transition-duration: 500ms;
+	transition-timing-function: ease;
 }
 
 .recipeItem-img {
 	flex: 0 0 50%;
-	background: lightcoral;
+	background: rgba(205,228,255,255);
 }
 
 .recipeItem-info {
@@ -30,10 +37,14 @@
 	order: 2;
 	font-size: 20px;
 	margin-bottom: 5px;
+	color: darkred;
 }
 .recipeItem-time {
 	text-align: right;
 	order: 1;
+	color: teal;
+	font-weight: 600;
+	letter-spacing: 1.2px;
 }
 .recipeItem-description {
 	order: 3;
