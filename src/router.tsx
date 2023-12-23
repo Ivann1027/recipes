@@ -5,6 +5,7 @@ import RecipeList from "./components/RecipeList"
 import Error from "./components/Error"
 import Search from "./components/Search"
 import Sorted from "./components/Sorted"
+import AddingRecipe from "./components/AddingRecipe"
 
 export const router = createBrowserRouter([
 	{
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
 			{
 				path: '/sorted',
 				element: <Sorted />
+			},
+			{
+				path: '/add-recipe',
+				element: <AddingRecipe />
 			}
 		]
 	},

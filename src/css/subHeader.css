@@ -1,0 +1,27 @@
+.subHeader {
+	margin-bottom: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.sort {
+	border: 1px solid #7e9bbd;
+	border-radius: 6px;
+	padding: 3px 5px;
+	width: 100px;
+	cursor: pointer;
+	margin-right: 50px;
+}
+
+.addRecipeBtn {
+
+}
+.addRecipeBtn button {
+	background: lightskyblue;
+	width: 150px;
+	padding: 7px 7px;
+	border-radius: 10px;
+}
+.addRecipeBtn button:active {
+	transform: translate(1px, 1px);
+}

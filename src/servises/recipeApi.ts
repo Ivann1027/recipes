@@ -17,8 +17,16 @@ export const recipeApi = createApi({
 				url: `/recipes/${id}`	
 			}),
 			providesTags: result => ['Recipe']
+		}),
+		addRecipe: builder.mutation<IRecipe, IRecipe>({
+			query: (recipe: IRecipe) => ({
+				url: '/recipes',
+				method: 'POST',
+				body: recipe
+			}),
+			invalidatesTags: ['Recipes']
 		})
 	})
 })
 
-export const { useGetRecipesQuery, useGetRecipeQuery } = recipeApi
+export const { useGetRecipesQuery, useGetRecipeQuery, useAddRecipeMutation } = recipeApi

@@ -1,0 +1,56 @@
+.addingRecipe {
+
+}
+
+.addingRecipe-form {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 20px;
+}	
+.addingRecipe-form label {
+	display: block;
+	margin-bottom: -10px;
+}
+
+.addingRecipe-name {
+
+}
+
+/* CATEGORIES */
+.categoriesContainer {
+
+}
+.addingRecipe-category {
+	display: inline-block;
+	border: 1px solid gray;
+	border-radius: 6px;
+	margin-right: 5px;
+	padding: 3px 5px;
+	cursor: pointer;
+}
+.addCategoryInput {
+
+}
+.addCategoryBtn {
+	background: lightcyan;
+}
+
+
+.addingRecipe-description {
+
+}
+
+
+/* STEPS */ 
+.addStepText {
+
+}
+.addStepBtn {
+
+}
+.stepsContainer {
+
+}
+.addingRecipe-step {
+	
+}
