@@ -22,7 +22,7 @@ const RecipePage = () => {
 				<h1 className='ingredients-title'>Ингредиенты:</h1>
 				<ul>
 					{recipe && recipe.ingredients.map(ingredient => (
-						<li key={ingredient.name}>{ingredient.name} - {ingredient.amount}.</li>
+						<li key={ingredient.name}>{ingredient.name} - {ingredient.amount}</li>
 					))}
 				</ul>
 			</section>

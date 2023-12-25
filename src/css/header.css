@@ -36,6 +36,9 @@
 	border-radius: 10px;
 	cursor: pointer;
 }
+.header-search button:hover {
+	background: lightblue;
+}
 .header-search button:active {
 	transform: translate(1px, 1px);
 }

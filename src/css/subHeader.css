@@ -21,6 +21,10 @@
 	width: 150px;
 	padding: 7px 7px;
 	border-radius: 10px;
+	cursor: pointer;
+}
+.addRecipeBtn button:hover {
+	background: lightblue;
 }
 .addRecipeBtn button:active {
 	transform: translate(1px, 1px);
