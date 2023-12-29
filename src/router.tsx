@@ -6,6 +6,8 @@ import Error from "./components/Error"
 import Search from "./components/Search"
 import Sorted from "./components/Sorted"
 import AddingRecipe from "./components/AddingRecipe"
+import LogIn from "./components/register/LonIn"
+import SignUp from "./components/register/SignUp"
 
 export const router = createBrowserRouter([
 	{
@@ -36,6 +38,14 @@ export const router = createBrowserRouter([
 			{
 				path: '/add-recipe',
 				element: <AddingRecipe />
+			},
+			{
+				path: '/login',
+				element: <LogIn />
+			},
+			{
+				path: '/signup',
+				element: <SignUp />
 			}
 		]
 	},

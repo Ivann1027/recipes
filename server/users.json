@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "email": "ivan2140@mail.ru",
+      "password": "$2a$10$8Ht0RuOuEZXL77NRQwtXFuV/D.C7RsuErfttiGV8hYY1i3o1yU1A6",
+      "userName": "Ivan",
+      "id": 1
+    },
+    {
+      "email": "amigo@mail.ru",
+      "password": "$2a$10$tdtIvWPfy0FfI.3k2z1sYO4UqJoAFH6cl8ppPDtmd9mE2Uaiy8OxC",
+      "userName": "Amigo",
+      "id": 2
+    },
+    {
+      "email": "dima@mail.ru",
+      "password": "$2a$10$W/hGVjrT8rO1J0wBBjbebu8eanV4ebO6JdcF.dngu.yJp6H503h1i",
+      "userName": "Dima",
+      "id": 3
+    }
+  ]
+}

@@ -19,3 +19,18 @@ export interface IRecipe {
 		minutes: number
 	}
 }
+
+export interface IUser {
+	userName: string
+	email: string
+	password: string
+}
+
+export interface ICurrentUser {
+	accessToken: string
+	user: {
+		id: number
+		userName: string
+		email: string
+	}
+}
