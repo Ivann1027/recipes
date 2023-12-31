@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import { IUser, ICurrentUser } from "../types/types"
+import { IUser, ICurrentUser, ILoginUser } from "../types/types"
 
 export const userApi = createApi({
 	reducerPath: 'userApi',
@@ -19,8 +19,16 @@ export const userApi = createApi({
 				body: user
 			}),
 			invalidatesTags: ['Users']
+		}),
+		login: builder.mutation<ICurrentUser, ILoginUser>({
+			query: (user) => ({
+				url: '/login',
+				method: 'POST',
+				body: user
+			}),
+			invalidatesTags: ['Users']
 		})
 	})
 })
 
-export const { useAddUserMutation } = userApi
+export const { useAddUserMutation, useLoginMutation } = userApi

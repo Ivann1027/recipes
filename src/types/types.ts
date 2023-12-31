@@ -34,3 +34,8 @@ export interface ICurrentUser {
 		email: string
 	}
 }
+
+export interface ILoginUser {
+	email: string
+	password: string
+}

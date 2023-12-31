@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { FaRegUser } from "react-icons/fa"
 import { CustomContext, IContextValue } from '../context/Context'
 import { ICurrentUser } from '../types/types'
+import Authorized from './user/Authorized'
 
 const Header = () => {
 
@@ -27,27 +28,24 @@ const Header = () => {
 		searchInput?.blur()
 	}
 
-	const logout = () => {
-		localStorage.setItem('currentUser', JSON.stringify(emptyUser))
-		setUser(emptyUser)
-	}
-
 	return (
 		<header className="header">
-			<h1 onClick={() => navigate('/recipes')} className='header-title'>Recipes</h1>
-			<div onClick={() => navigate('/recipes')} className='header-logo'></div>
-			<div className='header-search'>
+			<h1 onClick={() => navigate('/recipes')} className='header__title'>Recipes</h1>
+			<div onClick={() => navigate('/recipes')} className='header__logo'></div>
+			<div className='header__search'>
 				<form onSubmit={submitForm}>
 					<input id='searchInput' ref={inputRef} onChange={handleChange} value={value} placeholder='Найдите рецепт' type='text' />
 					<button type='submit'>Найти</button>
 				</form>
 			</div>
-			<div className='header__login'>
-				{user.user.userName.length ? <span onClick={logout} className='header__login-btn'>Выйти</span>
-					: <span onClick={() => navigate('/login')} className='header__login-btn'>Вход</span>
+				{user.user.userName.length ?
+						<Authorized />
+					:
+					<div className='header__login'>
+						<span onClick={() => navigate('/login')} className='header__login-btn'>Вход</span>
+						<FaRegUser />
+					</div>	
 				}
-				<FaRegUser />
-			</div>
 		</header>
 	)
 }

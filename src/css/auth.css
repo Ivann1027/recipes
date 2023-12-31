@@ -1,15 +1,15 @@
-.signup {
+.auth {
 
 }
 
-.signup__title {
+.auth__title {
 	text-align: center;
 	font-size: 26px;
 	margin-bottom: 40px;
 	color: darkred;
 }
 
-.signup__form {
+.auth__form {
 	width: 600px;
 	margin: 0 auto;
 	display: flex;
@@ -18,30 +18,30 @@
 	justify-content: center;
 }
 
-.signup__input {
+.auth__input {
 	width: 100%;
 	padding: 10px;
 	border-radius: 10px;
 	margin-bottom: 20px;
 	font-size: 17px;
 }
-.signup__input:focus {
+.auth__input:focus {
 	box-shadow: 0 0 10px 1px lightskyblue;
 }
 
-.signup__pass {
+.auth__pass {
 	position: relative;
 	width: 100%;
 	padding: 0;
 }
-.signup__eye {
+.auth__eye {
 	position: absolute;
 	top: 20%;
 	right: 20px;
 	cursor: pointer;
 }
 
-.signup__btn {
+.auth__btn {
 	font-size: 17px;
 	background: lightskyblue;
 	padding: 10px;
@@ -49,9 +49,17 @@
 	border-radius: 10px;
 	cursor: pointer;
 }
-.signup__btn:hover {
+.auth__btn:hover {
 	background: lightblue;
 }
-.signup__btn:active {
+.auth__btn:active {
 	transform: translate(1px, 1px);
+}
+
+.auth__link {
+	width: 100%;
+	text-align: right;
+	color: red;	
+	margin-bottom: 20px;
+	padding: 0 10px;
 }
