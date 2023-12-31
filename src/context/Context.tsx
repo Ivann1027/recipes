@@ -10,19 +10,26 @@ interface IContextProps {
 export interface IContextValue {
 	user: ICurrentUser
 	setUser: Dispatch<SetStateAction<ICurrentUser>>
+	emptyUser: ICurrentUser
 }
 
-export const Context: React.FC<IContextProps> = ({children}) => {
-
-	const [user, setUser] = useState<ICurrentUser>({accessToken: '', user: {userName: '', email: '', id: 0}})
+export const Context: React.FC<IContextProps> = ({ children }) => {
+	
+	const emptyUser: ICurrentUser = {accessToken: '', user: {userName: '', email: '', id: 0}}
+	const [user, setUser] = useState<ICurrentUser>(emptyUser)
 
 	useEffect(() => {
-		setUser(JSON.parse(localStorage.getItem('currentUser') as string))	
+		if (localStorage.getItem('currentUser') === null) {
+			localStorage.setItem('currentUser', JSON.stringify(emptyUser))
+		} else {
+			setUser(JSON.parse(localStorage.getItem('currentUser') as string))
+		}
 	}, [])
 
 	const value: IContextValue = {
 		user,
-		setUser
+		setUser,
+		emptyUser
 	}
 
 	return (

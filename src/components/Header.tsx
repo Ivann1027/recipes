@@ -12,7 +12,7 @@ const Header = () => {
 	const [value, setValue] = useState<string>('')
 	const searchInput = document.getElementById('searchInput')
 	const contextValue: IContextValue | null = useContext(CustomContext)
-	const { user, setUser } = contextValue as IContextValue
+	const { user, setUser, emptyUser } = contextValue as IContextValue
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setValue(e.target.value)
@@ -28,8 +28,8 @@ const Header = () => {
 	}
 
 	const logout = () => {
-		localStorage.removeItem('currentUser')
-		setUser({accessToken: '', user: {userName: '', email: '', id: 0}})
+		localStorage.setItem('currentUser', JSON.stringify(emptyUser))
+		setUser(emptyUser)
 	}
 
 	return (
