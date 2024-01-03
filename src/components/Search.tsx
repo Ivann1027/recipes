@@ -1,7 +1,7 @@
 import { useLocation, Link } from "react-router-dom"
 import { useGetRecipesQuery } from "../servises/recipeApi"
 import { IRecipe } from "../types/types"
-import '../css/recipes.css'
+import '../styles/recipes.scss'
 import RecipeItem from "./RecipeItem"
 
 const Search = () => {

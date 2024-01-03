@@ -1,5 +1,5 @@
 import { IRecipe } from "../types/types"
-import '../css/recipes.css'
+import '../styles/recipes.scss'
 
 interface RecipeItemProps {
 	recipe: IRecipe
@@ -10,7 +10,7 @@ const RecipeItem: React.FC<RecipeItemProps> = ({recipe}) => {
 	
 
 	return (
-		<article className="recipeItem">
+		<article className="recipeList__item recipeItem">
 			<div className="recipeItem__img"></div>
 			<div className="recipeItem__info">
 				<h1 className="recipeItem__title">{recipe.name}</h1>

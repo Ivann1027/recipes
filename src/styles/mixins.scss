@@ -1,0 +1,12 @@
+@mixin blueBtn {
+	background-color: lightskyblue;
+	cursor: pointer;
+	padding: 8px 15px;
+	border-radius: 10px;
+	&:hover {
+		background: lightblue;
+	}
+	&:active {
+		transform: translate(1px, 1px);
+	}
+}

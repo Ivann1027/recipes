@@ -1,6 +1,6 @@
 import SortCategories from "./SortCategories"
 import { useGetRecipesQuery } from "../servises/recipeApi"
-import '../css/subHeader.css'
+import '../styles/subHeader.scss'
 import AddRecipeBtn from "./AddRecipeBtn"
 
 const SubHeader = () => {

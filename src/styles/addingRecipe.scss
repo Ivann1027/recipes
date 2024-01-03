@@ -1,0 +1,114 @@
+@import 'mixins';
+
+.addingRecipe {
+
+	&__section {
+		margin-bottom: 40px;
+	}
+
+	form {
+
+		input {
+			display: block;
+			width: 100%;
+			padding: 8px;
+			border-radius: 10px;
+			font-size: 16px;
+			box-shadow: 2px 2px 6px gray;
+			margin-bottom: 15px;
+			&:focus {
+				box-shadow: 2px 2px 6px lightblue;
+			}
+		}
+
+		label {
+			display: block;
+			margin-bottom: 20px;
+			font-size: 18px;
+			color: darkred;
+		}
+
+		button {
+			@include blueBtn;
+			font-size: 16px;
+			font-weight: 600;
+		}
+
+		textarea {
+			width: 100%;
+			padding: 8px;
+			border-radius: 10px;
+			font-size: 16px;
+			box-shadow: 2px 2px 6px gray;
+			min-height: 70px;
+			margin-bottom: 15px;
+			&:focus {
+				box-shadow: 2px 2px 6px lightblue;
+			}
+		}
+
+		li {
+			list-style-type: disc;
+		}
+
+		// CATEGORIES
+		.categoriesContainer {
+			padding: 20px;
+
+			&__category {
+				display: inline-block;
+				border: 1px solid gray;
+				border-radius: 6px;
+				margin-right: 5px;
+				padding: 3px 5px;
+				cursor: pointer;
+			}
+		}
+
+		// INGREDIENTS
+		.ingredientContainer {
+			margin: 20px 0;
+
+			&__title {
+				margin-bottom: 20px;
+				color: lightseagreen;
+			}
+			&__ingredient {
+				list-style-type: disc;
+				width: 25%;
+				margin-bottom: 20px;
+				margin-left: 20px;
+				font-size: 18px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+
+		// STEPS 
+		.stepContainer {
+			margin: 20px 0;
+
+			&__title {
+				margin-bottom: 20px;
+				color: lightseagreen;
+			}
+			&__step {
+				position: relative;
+				margin-bottom: 20px;
+				border: 1px solid lightseagreen;
+				border-radius: 10px;
+				padding: 10px 60px 10px 20px;
+				font-size: 18px;
+				box-shadow: 2px 2px 6px rgb(131, 235, 230);
+				overflow-wrap: break-word;
+				min-height: 60px;
+				button {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+				}
+			}
+		}
+	}
+}

@@ -1,4 +1,4 @@
-import '../css/addingRecipe.css'
+import '../styles/addingRecipe.scss'
 import { useState, ChangeEvent, MouseEvent, FormEvent } from 'react'
 import { useAddRecipeMutation } from '../servises/recipeApi'
 import { useNavigate } from 'react-router-dom'
@@ -99,61 +99,61 @@ const AddingRecipe = () => {
 
 	return (
 		<section className='addingRecipe'>
-			<form onSubmit={submitRecipe} className='addingRecipe-form'>
-				<section className='addingRecipe-section'>
+			<form onSubmit={submitRecipe} className='addingRecipe__form'>
+				<section className='addingRecipe__section'>
 					<label htmlFor='name'>Название рецета: </label>
 					<input onChange={handleName} value={name} id='name' placeholder='Как нызывается ваш рецепт?' />
 				</section>
-				<section className="addingRecipe-section">
+				<section className="addingRecipe__section">
 					<div className='categoriesContainer'>
 						{categories && categories.map(category => (
-							<p onClick={() => deleteCategory(category)} className='addingRecipe-category' key={category}>{category}</p>
+							<p onClick={() => deleteCategory(category)} className='categoriesContainer__category' key={category}>{category}</p>
 						))}
 					</div>
 					<label htmlFor='categories'>Категории рецепта: </label>
 					<input value={category} onChange={handleCategory} id='categories' placeholder='Категория' />
 					<button onClick={addCategory} type='button'>Добавить категорию</button>
 				</section>
-				<section className="addingRecipe-section">
+				<section className="addingRecipe__section">
 					<label htmlFor='description'>Описание рецепта: </label>
 					<textarea onChange={handleDescription} value={description} id='description' placeholder='Скажите пару слов о рецепте'></textarea>
 				</section>
-				<section className="addingRecipe-section">
+				<section className="addingRecipe__section">
 					<label htmlFor="ingredient">Перечислите ингредиенты и их количество:</label>
-					<input onChange={addIngredientName} value={ingredient} className='addIngredientName' id='ingredient' placeholder='Ингредиент' />
-					<input onChange={addIngredientAmount} value={amount} className='addIngredientAmount' placeholder='Количество' />
+					<input onChange={addIngredientName} value={ingredient} id='ingredient' placeholder='Ингредиент' />
+					<input onChange={addIngredientAmount} value={amount} placeholder='Количество' />
 					<button onClick={addIngredient} type='button'>Добавить ингредиент</button>
 					<div className='ingredientContainer'>
-						<h1 style={{display: ingredients.length > 0 ? 'block' : 'none'}} className='ingredient-title'>Ваши ингредиенты:</h1>
+						<h1 style={{display: ingredients.length > 0 ? 'block' : 'none'}} className='ingredientContainer__title'>Ваши ингредиенты:</h1>
 						<ul>
 							{ingredients && ingredients.map(ingredient => (
-								<li key={ingredient.name} className='ingredient'>{ingredient.name} - {ingredient.amount}
+								<li key={ingredient.name} className='ingredientContainer__ingredient'>{ingredient.name} - {ingredient.amount}
 									<button onClick={(e) => deleteIngredient(e, ingredient.name)} type='button'><RxCross2 /></button>
 								</li>
 							))}
 						</ul>
 					</div>
 				</section>
-				<section className="addingRecipe-section">
+				<section className="addingRecipe__section">
 					<label htmlFor='step'>Добавьте пошаговый рецепт:</label>
 					<textarea onChange={handleStep} value={step} id='step' placeholder='Действие'></textarea>
 					<button onClick={addStep} type='button'>Добавить шаг</button>
 					<div className='stepContainer'>
-						<h1 style={{display: steps.length > 0 ? 'block' : 'none'}} className='step-title'>Приготовление:</h1>
+						<h1 style={{display: steps.length > 0 ? 'block' : 'none'}} className='stepContainer__title'>Приготовление:</h1>
 						{steps && steps.map(step => (
-							<p className='step' key={step.num}>{step.num}. {step.body}
+							<p className='stepContainer__step' key={step.num}>{step.num}. {step.body}
 							<button onClick={(e) => deleteStep(e, step.num)} type='button'><RxCross2 /></button>
 							</p>
 						))}
 					</div>
 				</section>
-				<section className="addingRecipe-section">
+				<section className="addingRecipe__section">
 					<p style={{color: 'darkred', fontSize: 18, marginBottom: 20}}>Сколько приготовление займёт по времени?</p>
 					<label htmlFor='hours' style={{color: 'black'}}>
-						<input className='houts-input' onChange={handleHours} value={hours} id='hours' type='number' /> часов
+						<input onChange={handleHours} value={hours} id='hours' type='number' /> часов
 					</label>
 					<label htmlFor='minutes' style={{color: 'black'}}>
-						<input className='minute-input' onChange={handleMinutes} value={minutes} id='minutes' type='number' /> минут
+						<input onChange={handleMinutes} value={minutes} id='minutes' type='number' /> минут
 					</label>
 				</section>
 				<button type='submit'>Сохранить рецепт</button>

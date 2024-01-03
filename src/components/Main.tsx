@@ -1,4 +1,4 @@
-import '../css/main.css'
+import '../styles/main.scss'
 import { Outlet } from 'react-router-dom'
 import SubHeader from './SubHeader'
 

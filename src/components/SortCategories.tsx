@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import '../css/subHeader.css'
-import { useRef } from "react"
+import '../styles/subHeader.scss'
 
 interface ICategoriesProps {
 	categories: string[]
@@ -17,14 +16,14 @@ const SortCategories: React.FC<ICategoriesProps> = ({ categories }) => {
 	}
 
 	return (
-		<aside>
+		<section>
 			<select id='select' defaultValue={'Все'} className="sort" onChange={handleChange}>
 				<option value='Все'>Все</option>
 				{categories.map(category => (
 					<option key={category} value={category}>{category}</option>
 				))}
 			</select>
-		</aside>
+		</section>
 	)
 }
 

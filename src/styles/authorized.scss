@@ -1,0 +1,45 @@
+.authorized {
+	order: 4;
+	position: relative;
+	padding: 10px;
+	border: 1px solid teal;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	&:hover {
+		background: rgb(157, 237, 237);
+	}
+
+	.menu {
+		position: absolute;
+		top: 120%;
+		right: 0;
+		padding: 10px 20px;
+		border: 2px solid rgb(241, 103, 53);
+		border-radius: 20px;
+		background: #fff;
+		line-height: 30px;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			white-space: nowrap;
+
+			&:hover {
+				color: rgb(241, 103, 53);
+			}
+			span {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+
+
+
+
+

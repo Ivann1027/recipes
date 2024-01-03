@@ -2,7 +2,7 @@ import RecipeItem from "./RecipeItem"
 import { useLocation } from "react-router-dom"
 import { useGetRecipesQuery } from "../servises/recipeApi"
 import { Link } from "react-router-dom"
-import '../css/recipes.css'
+import '../styles/recipes.scss'
 
 const Sorted = () => {
 

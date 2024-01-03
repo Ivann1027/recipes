@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, FormEvent, useContext } from 'react'
-import '../../css/auth.css'
+import '../../styles/auth.scss'
 import { FaEye, FaEyeSlash } from "react-icons/fa"
 import { useAddUserMutation } from '../../servises/userApi'
 import { CustomContext } from '../../context/Context'

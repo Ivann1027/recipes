@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import './css/index.css'
+import './styles/index.scss'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
 import { RouterProvider } from 'react-router-dom'

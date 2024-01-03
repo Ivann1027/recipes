@@ -1,0 +1,28 @@
+@import 'mixins';
+
+.subHeader {
+	margin-bottom: 40px;
+	display: flex;
+	align-items: center;
+
+	.sort {
+		border: 1px solid #7e9bbd;
+		border-radius: 6px;
+		padding: 3px 5px;
+		width: 100px;
+		cursor: pointer;
+		margin-right: 50px;
+	}
+
+	.addRecipeBtn {
+
+		button {
+			@include blueBtn;
+		}
+	}
+}
+
+
+
+
+

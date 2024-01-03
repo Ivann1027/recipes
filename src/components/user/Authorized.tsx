@@ -1,5 +1,5 @@
 import { useState, useContext, useRef, useEffect, ReactNode } from 'react'
-import '../../css/authorized.css'
+import '../../styles/authorized.scss'
 import { FaRegUser } from "react-icons/fa"
 import { MdLogout } from "react-icons/md"
 import { CustomContext } from '../../context/Context'
@@ -35,7 +35,7 @@ const Authorized = () => {
 	return (
 		<section ref={openRef} onClick={() => setIsActive(!isActive)} className="authorized">
 			{user.user.userName}
-			<div ref={menuRef} style={{display: isActive ? 'block' : 'none'}} className='authorized__menu'>
+			<div ref={menuRef} style={{display: isActive ? 'block' : 'none'}} className='authorized__menu menu'>
 				<p onClick={() => navigate('/account')} className='menu__item'><span>Личный кабинет</span> <FaRegUser /></p>
 				<p onClick={logout} className='menu__item'><span>Выйти</span> <MdLogout /></p>
 			</div>

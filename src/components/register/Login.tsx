@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
-import '../../css/auth.css'
+import '../../styles/auth.scss'
 import { ChangeEvent, FormEvent, useState, useContext } from "react"
 import { ICurrentUser, ILoginUser } from "../../types/types"
 import { FaEye, FaEyeSlash } from "react-icons/fa"

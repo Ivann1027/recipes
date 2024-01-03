@@ -1,7 +1,7 @@
 import { useGetRecipesQuery } from "../servises/recipeApi"
 import { IRecipe } from "../types/types"
 import RecipeItem from "./RecipeItem"
-import '../css/recipes.css'
+import '../styles/recipes.scss'
 import { Link } from "react-router-dom"
 
 const RecipeList = () => {

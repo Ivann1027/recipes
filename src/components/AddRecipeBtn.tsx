@@ -1,4 +1,4 @@
-import '../css/subHeader.css'
+import '../styles/subHeader.scss'
 import { useNavigate } from 'react-router-dom'
 
 const AddRecipeBtn = () => {
